@@ -18,7 +18,7 @@
 			putchar(' ');
 			putchar((s / 10) + '0');
 			putchar((s % 10) + '0');
-				
+
 			if (!((f == 98) && (s == 99)))
 			{
 				putchar(',');
