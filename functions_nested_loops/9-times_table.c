@@ -20,7 +20,7 @@ void times_table(void)
 			}
 			else
 				_putchar(out + '0');
-			if (m != 9)
+			if (mult != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
