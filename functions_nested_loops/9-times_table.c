@@ -10,8 +10,11 @@ void times_table(void)
 
 	for (n = 0; n < 10; n++)
 	{
-		for (mult = 0; mult < 10; mult++)
+		for (mult = 1; mult < 10; mult++)
 		{
+			_putchar('0');
+			_putchar(',');
+			_putchar(' ');
 			out = n * mult;
 			if (out > 9)
 			{
@@ -19,13 +22,14 @@ void times_table(void)
 				_putchar((out % 10) + '0');
 			}
 			else
+			{
+				_putchar(' ');
 				_putchar(out + '0');
+			}
 			if (mult != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
-				if ((out / 10) == 0)
-					_putchar(' ');
 			}
 		}
 		_putchar('\n');
