@@ -5,7 +5,7 @@
  * main - Entry point
  */
 
-int main(void)
+void main(void)
 {
 	int i;
 
