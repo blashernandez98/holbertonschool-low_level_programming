@@ -5,19 +5,20 @@
  * main - Entry point
  */
 
-void main(void)
+int main(void)
 {
 	int i;
 
-	for (i = 0; i < 100; i++)
+	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0)
-			puts("Fizz");
+			printf("Fizz");
 		if (i % 5 == 0)
-			puts("Buzz");
+			printf("Buzz");
 		if ((i % 3 != 0) && (i % 5 != 0))
 			printf("%d", i);
 		printf(" ");
 	}
 	printf("\n");
+	return (0);
 }
