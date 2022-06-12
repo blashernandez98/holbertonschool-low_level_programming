@@ -38,5 +38,4 @@ void print_number(int n)
 		divisor /= 10;
 		num_of_digits--;
 	}
-	_putchar('\n');
 }
