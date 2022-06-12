@@ -10,6 +10,22 @@ void print_number(int n)
 	int num_of_digits = 1;
 	int divisor = 1;
 
+	if (n < 0)
+	{
+		if (n < -1999999999)
+		{
+			_putchar('-');
+			_putchar('2');
+			n %= 1000000000;
+			n *= -1;
+		}
+		else
+		{
+			n *= -1;
+			_putchar('-');
+		}
+	}
+
 	while (divisor <= n / 10)
 	{
 		num_of_digits++;
