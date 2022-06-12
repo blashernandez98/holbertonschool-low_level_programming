@@ -34,7 +34,6 @@ int main(void)
 	{
 		if ((n % i == 0) && (isprime(largest) == 1))
 			largest = i;
-		printf("%ld %ld", i, largest);
 	}
 	printf("%ld\n", largest);
 	return (0);
