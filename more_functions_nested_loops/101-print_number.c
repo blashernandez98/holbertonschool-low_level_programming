@@ -17,10 +17,10 @@ void print_number(int n)
 	}
 	while (num_of_digits > 0)
 	{
-		putchar(n / divisor + '0');
+		_putchar(n / divisor + '0');
 		n %= divisor;
 		divisor /= 10;
 		num_of_digits--;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
