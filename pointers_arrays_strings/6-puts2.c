@@ -9,11 +9,9 @@ void puts2(char *s)
 {
 	int i;
 
-	for (i = 0; *s != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		_putchar(*s);
 		if (i % 2 == 0)
 			_putchar(s[i]);
 	}
-	
 }
