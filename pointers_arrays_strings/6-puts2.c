@@ -11,6 +11,7 @@ void puts2(char *s)
 
 	for (i = 0; *s != '\0'; i++)
 	{
+		_putchar(*s);
 		if (i % 2 == 0)
 			_putchar(s[i]);
 	}
