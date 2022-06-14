@@ -32,7 +32,7 @@ void rev_string(char *s)
 
 	for (i = 0; i < length / 2; i++)
 	{
-		aux = s[i];
+		aux = *s;
 		*s = *end;
 		*end = aux;
 		s++;
