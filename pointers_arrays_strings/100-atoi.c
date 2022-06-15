@@ -1,25 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - Function that returns the length of a string.
- * @s: String to calculate length of.
- * Return: Lenght of string @s.
- */
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-	return (len);
-}
-
-
-/**
  * isnumber - Evaluates a char to see if its a number
  * @c: char input
  * Return: Int: Value of char if its a number, -1 otherwise.
@@ -58,7 +39,7 @@ int _atoi(char *str)
 		i--;
 		while (i >= start)
 		{
-			res += (str[i] * mult);
+			res += (str[i] - '0') * mult;
 			mult *= 10;
 			i--;
 		}
