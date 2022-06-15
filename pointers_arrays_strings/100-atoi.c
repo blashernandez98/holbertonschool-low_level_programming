@@ -53,7 +53,7 @@ int _atoi(char *str)
 	if (str[i] != '\0')
 	{
 		start = i;
-		while (s[i] != '\0')
+		while (str[i] != '\0')
 			i++;
 		i--;
 		while (i >= start)
