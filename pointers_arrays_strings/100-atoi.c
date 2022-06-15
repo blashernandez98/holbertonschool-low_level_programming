@@ -27,6 +27,8 @@ int _atoi(char *str)
 
 	while (str[i] != '\0')
 	{
+		if (str[i] == 45)
+			mult *= -1;
 		if (isnumber(str[i]) > 0)
 			break;
 		i++;
@@ -40,11 +42,10 @@ int _atoi(char *str)
 		while (i >= start)
 		{
 			res += (str[i] - '0') * mult;
-			mult *= 10;
+			if (mult != 100000000)
+				mult *= 10;
 			i--;
 		}
-		if (str[i] == '-')
-			res *= -1;
 	}
 	return (res);
 }
