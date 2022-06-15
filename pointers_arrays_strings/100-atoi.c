@@ -27,8 +27,6 @@ int _strlen(char *s)
 
 int isnumber(char c)
 {
-	int res = c;
-
 	if (c > 47 && c < 58)
 		return (1);
 	else
