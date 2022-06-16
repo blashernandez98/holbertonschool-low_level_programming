@@ -8,8 +8,6 @@
 
 int separator(char c)
 {
-	int b = 0;
-
 	switch (c)
 	{
 		case (32):
