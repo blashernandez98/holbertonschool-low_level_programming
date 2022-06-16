@@ -12,19 +12,16 @@ char *leet(char *s)
 	char *enc = "4433007711";
 	int i, j;
 
-	if (s)
+	for (i = 0; s[i]; i++)
 	{
-		for (i = 0; s[i]; i++)
+		for (j = 0; let[j]; j++)
 		{
-			for (j = 0; let[j]; j++)
+			if (s[i] == let[j])
 			{
-				if (s[i] == let[j])
-				{
-					s[i] = enc[j];
-					break;
-				}
+				s[i] = enc[j];
+				break;
 			}
 		}
 	}
-	return (s);
+return (s);
 }
