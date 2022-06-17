@@ -29,7 +29,7 @@ int is_inside(char *s, char c)
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int res = 0;
-	
+
 	while (*s)
 	{
 		if (is_inside(accept, *s))
