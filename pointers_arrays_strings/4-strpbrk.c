@@ -1,4 +1,5 @@
 #include "main.h"
+#include "stddef.h"
 
 /**
  * is_inside - Checks if char @c is inside string @s.
