@@ -8,7 +8,7 @@
 
 void print_chessboard(char (*a)[8])
 {
-	char rank, file;
+	int rank, file;
 
 	for (rank = 0; rank < 8; rank++)
 	{
