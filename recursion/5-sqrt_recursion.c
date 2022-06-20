@@ -9,12 +9,14 @@
 
 int guess(int n, int g)
 {
-	if (g > 0)
+	if (g < n / 2)
 	{
 		if (n / g == g)
 			return (g);
+		else if (n / g < g / 10)
+			return (guess(n, g * 10));
 		else
-			return (guess(n, g - 1));
+			return (guess(n, g + 1));
 	}
 	return (-1);
 }
@@ -28,7 +30,7 @@ int guess(int n, int g)
 int _sqrt_recursion(int n)
 {
 	if (n > 3)
-		return (guess(n, n / 2));
+		return (guess(n, 2));
 	else if (n == 1)
 		return (1);
 	return (-1);
