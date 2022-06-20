@@ -42,7 +42,7 @@ int _atoi(char *str)
 		while (i >= start)
 		{
 			res += (str[i] - '0') * mult;
-			if (mult != 100000000)
+			if (mult != 10000000)
 				mult *= 10;
 			i--;
 		}
