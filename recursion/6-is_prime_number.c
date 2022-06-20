@@ -23,7 +23,7 @@ int guess(int n, int g)
 /**
  * sqrt_aprox - Find natural sqrt of int.
  * @n: Int to find sqrt.
- * Return: Sqrt of @n if it exists, 
+ * Return: Sqrt of @n if it exists.
  * closes int to sqrt otherwise.
  */
 
@@ -39,7 +39,7 @@ int sqrt_aprox(int n)
  * isdivisor - checks if a number is has any divisor.
  * @n: Number to check if divisible by @d.
  * @d: Initial posible divisor
- * @sqrt - Square root of @n.
+ * @sqrt: Square root of @n.
  * Return: 1 if no divisor found, 0 otherwise.
  */
 
