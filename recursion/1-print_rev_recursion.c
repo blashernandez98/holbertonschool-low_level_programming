@@ -7,7 +7,6 @@
 
 void _print_rev_recursion(char *s)
 {
-	char start = *s;
 	if (*s)
 	{
 		_puts_recursion(s + 1);
