@@ -28,6 +28,8 @@ int guess(int n, int g)
 int _sqrt_recursion(int n)
 {
 	if (n > 3)
-		return (guess(n, n/2));
+		return (guess(n, n / 2));
+	else if (n == 1)
+		return (1);
 	return (-1);
 }
