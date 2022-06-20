@@ -10,17 +10,14 @@
 
 int guess(int n, int g)
 {
-	if (g <= n / 2)
-	{
-		if (n / g == g && n % g == 0)
-			return (g);
-		else if (n > g * g * 100)
-			return (guess(n, g * 10));
-		else if ((g + 1) * (g + 1) > n)
-			return (g);
-		else
-			return (guess(n, g + 1));
-	}
+	if (n / g == g && n % g == 0)
+		return (g);
+	else if (n > g * g * 100)
+		return (guess(n, g * 10));
+	else if ((g + 1) * (g + 1) > n)
+		return (g);
+	else
+		return (guess(n, g + 1));
 }
 
 /**
