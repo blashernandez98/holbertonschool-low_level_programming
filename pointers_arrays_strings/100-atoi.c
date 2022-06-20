@@ -36,7 +36,7 @@ int _atoi(char *str)
 	if (str[i])
 	{
 		start = i;
-		while (str[i])
+		while (str[i] && isnumber(str[i]))
 			i++;
 		i--;
 		while (i >= start)
