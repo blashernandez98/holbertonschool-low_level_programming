@@ -3,6 +3,7 @@
 /**
  * _strlen_recursion - Similar to std lib function "strlen".
  * @s: String to measure length.
+ * Return: length of @s.
  */
 
 int _strlen_recursion(char *s)
