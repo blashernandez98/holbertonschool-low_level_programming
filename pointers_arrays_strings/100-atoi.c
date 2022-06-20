@@ -23,20 +23,20 @@ int isnumber(char c)
 
 int _atoi(char *str)
 {
-	int res = 0, i = 0, start, mult = 1;
+	int res = 0, i = 0, start, mult = 1, sign = 1;
 
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		if (str[i] == 45)
-			mult *= -1;
+			sign *= -1;
 		if (isnumber(str[i]) > 0)
 			break;
 		i++;
 	}
-	if (str[i] != '\0')
+	if (str[i])
 	{
 		start = i;
-		while (str[i] != '\0')
+		while (str[i])
 			i++;
 		i--;
 		while (i >= start)
