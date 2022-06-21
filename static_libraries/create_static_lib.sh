@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # This script creates a library from all the c files in the
 # working directory.
 
