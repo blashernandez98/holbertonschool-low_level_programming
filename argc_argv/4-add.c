@@ -1,5 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+
+/**
+ * pure_number - Checks if a string is only digits.
+ * @s: String to check
+ * Return: 1 if only numbers, 0 otherwise.
+ */
+
+int pure_number(char *s)
+{
+	while (*s)
+	{
+		if (!(isdigit(*s)))
+			return (0);
+		s++;
+	}
+	return (1);
+}
 
 /**
  * main - Entry Point.
@@ -16,7 +34,8 @@ int main(int argc, char **argv)
 	while (--argc)
 	{
 		a = atoi(argv[argc]);
-		if (a)
+
+		if (pure_number(argv[argc]))
 			res += a;
 		else
 		{
