@@ -22,7 +22,7 @@ char *rot13(char *s)
 				s[i] = rot_13[j];
 				break;
 			}
-		}	
+		}
 	}
 	return (s);
 }
