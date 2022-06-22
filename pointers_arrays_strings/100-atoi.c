@@ -11,7 +11,7 @@ int isnumber(char c)
 	if (c > 47 && c < 58)
 		return (1);
 	else
-		return (0);
+		return (-1);
 }
 
 
@@ -41,7 +41,7 @@ int _atoi(char *str)
 		i--;
 		while (i >= start)
 		{
-			res += (str[i] - '0') * mult;
+			res += (str[i] - '0') * mult * sign;
 			if (mult != 1000000000)
 				mult *= 10;
 			i--;
