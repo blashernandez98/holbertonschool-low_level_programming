@@ -20,7 +20,7 @@ char *rot13(char *s)
 	{
 		for (j = 0; alpha[j]; j++)
 		{
-			if (aplha[j] == s[i])
+			if (alpha[j] == s[i])
 			{
 				s[i] = rot_13[j];
 				break;
