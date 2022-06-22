@@ -47,5 +47,5 @@ int _atoi(char *str)
 			i--;
 		}
 	}
-	return (res * sign);
+	return (res);
 }
