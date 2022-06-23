@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - Creates duplicate of string
@@ -11,7 +12,8 @@
 char *_strdup(char *str)
 {
 	char *copy = NULL;
-	
+	int i;
+
 	if (str)
 		copy = malloc(strlen(str));
 	if (copy)
