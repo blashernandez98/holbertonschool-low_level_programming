@@ -12,7 +12,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned long int len, i = 0;
+	unsigned long int len = 0, i = 0;
 	char *concat = NULL;
 
 	if (s1)
