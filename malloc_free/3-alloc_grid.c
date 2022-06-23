@@ -25,7 +25,7 @@ int **alloc_grid(int w, int h)
 		for (i = 0; i < h; i++)
 		{
 			for (j = 0; j < w; j++)
-				grid[j][i] = 0;
+				grid[i][j] = 0;
 		}
 	}
 	return (grid);
