@@ -26,12 +26,12 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (concat)
 	{
-		for (; (*s1) && (s1); s1++)
+		for (; (s1) && (*s1); s1++)
 		{
 			concat[i] = *s1;
 			i++;
 		}
-		for (; (*s2) && (s2); s2++)
+		for (; (s2) && (*s2); s2++)
 		{
 			concat[i] = *s2;
 			i++;
