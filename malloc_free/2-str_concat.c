@@ -6,7 +6,7 @@
 /**
  * str_concat - Allocates new memory to concat two strings
  * @s1: First string input
- * @s2: Second string input 
+ * @s2: Second string input
  * Return: Pointer to new memory with @s1 + @s2
  */
 
