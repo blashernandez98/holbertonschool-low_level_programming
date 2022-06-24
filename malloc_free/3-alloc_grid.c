@@ -17,10 +17,12 @@ int **alloc_grid(int w, int h)
 
 	if ((h <= 0) || (w <= 0))
 		return (NULL);
-	size = w * h;
-	grid = malloc(4 * size);
+	
+	grid = (int**)malloc(h * sizeof(int*));
+	for (i = 0; i < w; i++)
+		grid[i] = (int*)malloc(sizeof(int));
 
-	if (grid)
+	if (grid && grid[0])
 	{
 		for (i = 0; i < h; i++)
 		{
