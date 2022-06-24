@@ -9,7 +9,7 @@
  * @i: Height of arr.
  */
 
-void malloctest(int** grid, int i)
+int malloctest(int** grid, int i)
 {
 	int h;
 
@@ -18,7 +18,9 @@ void malloctest(int** grid, int i)
 		for (h = --i; h >= 0; h--)
 			free(grid[i]);
 		free(grid);
+		return (1);
 	}
+	return (0);
 }
 
 /**
@@ -44,7 +46,8 @@ int **alloc_grid(int w, int h)
 	for (i = 0; i < h; i++)
 	{
 		grid[i] = (int*)malloc(sizeof(int) * w);
-		malloctest(grid, i);
+		if (malloctest(grid, i))
+			return (NULL);
 	}
 
 	if (grid)
