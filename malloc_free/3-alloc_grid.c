@@ -4,6 +4,24 @@
 #include <string.h>
 
 /**
+ * malloctest - Free memory when malloc failed in 2d arr
+ * @arr: Pointer to pointers of ints.
+ * @i: Height of arr.
+ */
+
+void malloctest(int** grid, int i)
+{
+	if !(grid[i])
+	{
+		for (h = i; h >= 0; h--)
+		{
+			free(grid[i]);
+		}
+		free(grid);
+	}
+}
+
+/**
  * alloc_grid - Allocates and returns pointer to 2 dimensonal array of ints.
  * @h: Height of array.
  * @w: With of array.
@@ -17,12 +35,19 @@ int **alloc_grid(int w, int h)
 
 	if ((h <= 0) || (w <= 0))
 		return (NULL);
-	
-	grid = (int**)malloc(h * sizeof(int*));
-	for (i = 0; i < h; i++)
-		grid[i] = (int*)malloc(sizeof(int) * w);
 
-	if (grid && grid[0])
+	grid = (int**)malloc(h * sizeof(int*));
+	
+	if !(grid)
+		return (NULL);
+	
+	for (i = 0; i < h; i++)
+	{
+		grid[i] = (int*)malloc(sizeof(int) * w);
+		malloctest(grid, i);
+	}
+
+	if (grid)
 	{
 		for (i = 0; i < h; i++)
 		{
