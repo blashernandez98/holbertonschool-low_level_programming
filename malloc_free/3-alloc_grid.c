@@ -11,12 +11,12 @@
 
 void malloctest(int** grid, int i)
 {
-	if !(grid[i])
+	int h;
+
+	if (!(grid[i]))
 	{
 		for (h = i; h >= 0; h--)
-		{
 			free(grid[i]);
-		}
 		free(grid);
 	}
 }
