@@ -6,18 +6,22 @@
 /**
  * malloctest - Free memory when malloc failed in 2d arr
  * @grid: Pointer to pointers of ints.
- * @i: Height of arr.
+ * @i: Height of arr to check.
+ * @w: Width of arr.
  * Return: 1 if failed, 0 on success.
  */
 
-int malloctest(int **grid, int i)
+int malloctest(int **grid, int i, int w)
 {
-	int h;
+	int h, c;
 
 	if (!(grid[i]))
 	{
 		for (h = --i; h >= 0; h--)
-			free(grid[i]);
+		{
+			for (c = 0; c < w; c++)
+				free(grid[i][c]);
+		}
 		free(grid);
 		return (1);
 	}
@@ -46,7 +50,7 @@ int **alloc_grid(int w, int h)
 	for (i = 0; i < h; i++)
 	{
 		grid[i] = (int *)malloc(sizeof(int) * w);
-		if (malloctest(grid, i))
+		if (malloctest(grid, i, w))
 			return (NULL);
 	}
 
