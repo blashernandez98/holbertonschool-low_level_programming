@@ -38,7 +38,7 @@ int **alloc_grid(int w, int h)
 
 	grid = (int**)malloc(h * sizeof(int*));
 	
-	if !(grid)
+	if (!(grid))
 		return (NULL);
 	
 	for (i = 0; i < h; i++)
