@@ -45,7 +45,7 @@ int **alloc_grid(int w, int h)
 	for (i = 0; i < h; i++)
 	{
 		grid[i] = (int *)malloc(sizeof(int) * w);
-		if (malloctest(grid, i, w))
+		if (malloctest(grid, i))
 			return (NULL);
 	}
 
