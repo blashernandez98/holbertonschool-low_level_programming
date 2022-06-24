@@ -10,14 +10,17 @@
  * Return: 1 if failed, 0 on success.
  */
 
-int malloctest(int **grid, int i)
+int malloctest(int **grid, int i, int width)
 {
-	int h;
+	int h, w;
 
 	if (!(grid[i]))
 	{
 		for (h = --i; h >= 0; h--)
-			free(grid[i]);
+		{
+			for (w = 0; w < width; w++)	
+				free(&grid[w][h]);
+		}
 		free(grid);
 		return (1);
 	}
@@ -46,7 +49,7 @@ int **alloc_grid(int w, int h)
 	for (i = 0; i < h; i++)
 	{
 		grid[i] = (int *)malloc(sizeof(int) * w);
-		if (malloctest(grid, i))
+		if (malloctest(grid, i, w))
 			return (NULL);
 	}
 
