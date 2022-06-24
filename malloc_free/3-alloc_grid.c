@@ -15,7 +15,7 @@ void malloctest(int** grid, int i)
 
 	if (!(grid[i]))
 	{
-		for (h = i; h >= 0; h--)
+		for (h = --i; h >= 0; h--)
 			free(grid[i]);
 		free(grid);
 	}
