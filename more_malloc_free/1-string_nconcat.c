@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
+#include <stdio.h>
 
 /**
  * string_nconcat - Concatenates two strings in newly allocated memory.
@@ -14,17 +15,20 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *res = NULL;
-	unsigned int i = 0, j, len2 = 0;
+	unsigned int i = 0, j, len = 0, len2 = 0;
 
 	if (s2)
 		len2 = strlen(s2);
+	if (s1)
+		len = strlen(s1);
 	if (n < len2)
-		res = malloc(strlen(s1) + n + 1);
+		res = malloc(len + n + 1);
 	else
-		res = malloc(strlen(s1) + len2 + 1);
+		res = malloc(len + len2 + 1);
+
 	if (res)
 	{
-		while (*s1)
+		while (s1 && *s1)
 		{
 			res[i] = *s1++;
 			i++;
