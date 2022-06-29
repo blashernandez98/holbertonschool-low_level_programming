@@ -15,7 +15,7 @@ struct dog
 	char *name;
 	char *owner;
 	float age;
-};
+} dog_t;
 #endif
 
 #ifndef INIT_DOG
