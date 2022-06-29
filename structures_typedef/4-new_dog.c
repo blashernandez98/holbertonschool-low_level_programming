@@ -22,7 +22,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		res->name = strdup(name);
 		if (res->name == NULL)
 		{
-			printf("hola");
 			free(res);
 			return (NULL);
 		}
