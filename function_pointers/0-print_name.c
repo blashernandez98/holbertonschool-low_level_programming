@@ -6,7 +6,7 @@
  * @f: Pointer to function that prints.
  */
 
-void print_name(char *name, void (*f)(char *str))
+void print_name(char *name, void (*f)(char *))
 {
-	*f(name);
+	(*f)(name);
 }
