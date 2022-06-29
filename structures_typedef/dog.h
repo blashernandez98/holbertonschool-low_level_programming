@@ -10,7 +10,7 @@
  * Description: Just a dog structure.
  */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	char *owner;
