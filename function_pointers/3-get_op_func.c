@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include "3-op_functions.c"
+#include "stddef.h"
 
 /**
  * get_op_func - Selects correct function for operator.
@@ -21,7 +22,7 @@ int (*get_op_func(char *op))(int, int)
 
 	for (i = 0; i < 6; i++)
 	{
-		if (ops[i]->op == *op)
-			return (ops[i]->f);
+		if (ops[i].op == *op)
+			return (ops[i].f);
 	}
 }
