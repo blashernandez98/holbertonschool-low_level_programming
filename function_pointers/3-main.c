@@ -1,5 +1,7 @@
 #include "3-calc.h"
 #include "3-get_op_func.c"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main - Simple calculator
