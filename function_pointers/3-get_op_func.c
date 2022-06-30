@@ -20,9 +20,10 @@ int (*get_op_func(char *op))(int, int)
 	};
 	int i;
 
-	for (i = 0; i < 6; i++)
+	for (i = 0; i < 5; i++)
 	{
 		if (ops[i].ch[0] == *op)
 			return (ops[i].f);
 	}
+	return (ops[i].f);
 }
