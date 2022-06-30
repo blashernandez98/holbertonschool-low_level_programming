@@ -3,13 +3,13 @@
 
 /**
  * struct op - Struct op.
- * @op: Operator.
+ * @ch: Operator.
  * @f: Function of operator.
  */
 
 typedef struct op
 {
-	char* ch;
+	char *ch;
 	int (*f)(int a, int b);
 } op_t;
 
