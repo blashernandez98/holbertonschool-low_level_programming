@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("Error\n")
+		printf("Error\n");
 		exit(98);
 	}
 
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if (b == 0 && (argv[2] == '/' || argv[2] == '%'))
+	if (b == 0 && (argv[2][0] == '/' || argv[2][0] == '%'))
 	{
 		printf("Error\n");
 		exit(100);
