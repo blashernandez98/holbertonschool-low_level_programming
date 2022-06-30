@@ -11,7 +11,7 @@ void array_iterator(int arr[], int size, void (*action)(int))
 {
 	int i;
 
-	if (action)
+	if (action && arr)
 	{
 		for (i = 0; i < size; i++)
 			(*action)(arr[i]);
