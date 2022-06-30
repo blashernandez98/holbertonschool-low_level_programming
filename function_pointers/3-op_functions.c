@@ -1,5 +1,4 @@
-#ifndef OP_FUNCTIONS_C
-#define OP_FUNCTIONS_C
+#include "3-calc.h"
 /**
  * op_add - Returns sum of a and b.
  * @a: First element.
@@ -59,5 +58,3 @@ int op_mod(int a, int b)
 {
 	return (a % b);
 }
-
-#endif
