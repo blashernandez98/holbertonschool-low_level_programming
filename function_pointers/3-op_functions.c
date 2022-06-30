@@ -1,4 +1,3 @@
-#include "3-calc.h"
 #ifndef OP_FUNCTIONS_C
 #define OP_FUNCTIONS_C
 /**
