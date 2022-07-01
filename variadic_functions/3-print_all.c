@@ -44,7 +44,6 @@ int count_format(const char * const s)
 void print_all(const char * const format, ...)
 {
 	va_list arg_ptr;
-	char *str_format;
 	int i = 0, args;
 
 	va_start(arg_ptr, 0);
