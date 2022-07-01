@@ -17,10 +17,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_start(arg_ptr, NULL);
 	if (n == 0)
 		return (0);
-	else
-	{
-		while (arg_ptr)
-			sum += va_arg(arg_ptr, int);
-	}
+	while (arg_ptr)
+		sum += va_arg(arg_ptr, int);
 	return (sum);
 }
