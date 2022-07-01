@@ -46,7 +46,7 @@ void print_all(const char * const format, ...)
 {
 	va_list arg_ptr;
 	char *str_format;
-	int i = 0, j = 0, args;
+	int i = 0, args;
 
 	va_start(arg_ptr, 0);
 	str_format = strdup(format);
