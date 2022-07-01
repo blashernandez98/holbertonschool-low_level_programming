@@ -19,14 +19,13 @@ void after_format(int *args_ptr)
 /**
  * count_format - Counts number of chars that match format.
  * @s: String passed as format.
- * 
  * Return: Number of correct format chars.
  */
 
-int count_format(char *s)
+int count_format(const char * const s)
 {
 	int i = 0, res = 0;
-	char *format = "cifs";
+	const char * const format = "cifs";
 
 	while (s[i])
 	{
@@ -49,9 +48,8 @@ void print_all(const char * const format, ...)
 	int i = 0, args;
 
 	va_start(arg_ptr, 0);
-	str_format = strdup(format);
-	args = count_format(str_format);
-	
+	args = count_format(format);
+
 	while (format[i])
 	{
 		switch (format[i])
