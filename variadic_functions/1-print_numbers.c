@@ -24,9 +24,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		s = "";
 	else
 		s = strdup(separator);
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n - 1; i++)
 	{
 		printf("%d%s", va_arg(arg_ptr, int), s);
 	}
-	printf("\n");
+	printf("%d\n", *arg_ptr);
 }
