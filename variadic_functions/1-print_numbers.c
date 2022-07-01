@@ -7,7 +7,7 @@
 /**
  * print_numbers - Prints numbers passed to it with separator.
  * @separator: String separator.
- * @n: Number of integers passed to it. 
+ * @n: Number of integers passed to it.
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
