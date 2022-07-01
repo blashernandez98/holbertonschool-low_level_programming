@@ -4,6 +4,7 @@
 #include "variadic_functions.h"
 #include <string.h>
 
+
 /**
  * print_strings - Prints strings passed to it with separator.
  * @separator: String separator.
@@ -15,8 +16,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list arg_ptr;
 	unsigned int i;
 	char *s;
+	char *string;
 
-	va_start(arg_ptr, NULL);
+	va_start(arg_ptr, 0);
 
 	if (n)
 	{
@@ -26,7 +28,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			s = strdup(separator);
 		for (i = 0; i < n - 1; i++)
 		{
-			printf("%s%s", va_arg(arg_ptr, char *), s);
+			string = va_arg(arg_ptr, char *);
+			if (string)
+				printf("%s%s", string, s);
+			else
+				printf("(nil)%s", s);
 		}
 		printf("%s", va_arg(arg_ptr, char *));
 	}
