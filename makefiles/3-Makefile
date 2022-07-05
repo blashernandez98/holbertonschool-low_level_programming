@@ -19,5 +19,4 @@ fclean:
 
 re :
 	fclean
-	$(CC) -c $(SRC) -o $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
