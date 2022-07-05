@@ -10,7 +10,7 @@ all : $(OBJ)
 clean :
 	$(RM) *~ school
 
-ocleam :
+oclean :
 	$(RM) $(OBJ)
 
 fclean:
