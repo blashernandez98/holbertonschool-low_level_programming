@@ -4,7 +4,7 @@
 /**
  * print_listint - Prints list of ints.
  * @head: Pointer to first node.
- * 
+ *
  * Return: Size of list.
  */
 
