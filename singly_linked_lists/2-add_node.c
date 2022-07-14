@@ -2,6 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 
+/**
+ * add_node - Adds node to linked list.
+ * @head: Pointer to head pointer of list.
+ * @str: String to store in new node.
+ *
+ * Return: Pointer to new node if succesful, NULL otherwise.
+ */
+
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new = malloc(sizeof(list_t));
