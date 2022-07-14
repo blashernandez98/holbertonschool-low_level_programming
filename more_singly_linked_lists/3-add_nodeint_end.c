@@ -20,7 +20,10 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		new->next = NULL;
 		while (cursor && cursor->next)
 			cursor = cursor->next;
-		cursor->next = new;	
+		if (cursor)
+			cursor->next = new;
+		else
+			cursor = new;
 	}
 	return (new);
 }
