@@ -23,7 +23,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		if (cursor)
 			cursor->next = new;
 		else
-			cursor = new;
+			*head = new;
 	}
 	return (new);
 }
