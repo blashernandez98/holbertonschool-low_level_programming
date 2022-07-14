@@ -18,6 +18,5 @@ size_t print_listint(const listint_t *head)
 		size++;
 		head = head->next;
 	}
-	printf("-> %ld elements\n", size);
 	return (size);
 }
