@@ -17,7 +17,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	size_t len;
 	listint_t *cursor, *aux;
 
-	if (!head)
+	if (!head || !(*head))
 		return (-1);
 	len = listint_len(*head);
 	if (len < index)
