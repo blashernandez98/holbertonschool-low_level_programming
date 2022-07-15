@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 #include "1-listint_len.c"
+#include "6-pop_listint.c"
 
 /**
  * delete_nodeint_at_index - Insert node at nth index of intlist.
