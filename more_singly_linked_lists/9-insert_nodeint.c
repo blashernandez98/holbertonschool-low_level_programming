@@ -23,7 +23,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 
 	if (index == 0)
 		return (add_nodeint(head, n));
-	
+
 	cursor = *head;
 	for (i = 0; i != index - 1; i++)
 		cursor = cursor->next;
