@@ -1,5 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
+#include "1-listint_len.c"
+#include "2-add_nodeint.c"
 
 /**
  * insert_nodeint_at_index - Insert node at nth index of intlist.
