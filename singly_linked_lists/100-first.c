@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/**
+ * premain - Prints some text before main executes.
+ */
+
 void __attribute__ ((constructor)) premain()
 {
 	printf("You're beat! and yet, you must allow,\n");
