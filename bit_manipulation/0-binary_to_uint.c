@@ -10,7 +10,7 @@ int pow2(int power)
 	return (res);
 }
 
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	int len, i, pow;
 	unsigned int res = 0;
