@@ -29,8 +29,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	if (index > 31)
 		return (-1);
 
-	unsigned long int aux = pow2(index);
-	
-	*n = ((*n) | aux);
+	*n = ((*n) | pow2(index));
+
 	return(1);
 }
