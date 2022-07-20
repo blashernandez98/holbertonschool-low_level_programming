@@ -26,7 +26,11 @@ int pow2(int power)
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int aux = pow2(index);
+	if (index > 31)
+		return (-1);
 
-	return((*n) | aux);
+	unsigned long int aux = pow2(index);
+	
+	*n = ((*n) | aux);
+	return(1);
 }
