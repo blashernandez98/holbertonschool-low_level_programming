@@ -28,6 +28,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int aux = pow2(index);
 
-	*n = ((*n) | aux);
-	return (*n);
+	return((*n) | aux);
 }
