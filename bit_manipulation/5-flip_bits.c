@@ -31,8 +31,13 @@ int recursive_bits(unsigned long int n, unsigned long int m)
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	if (n || m)
-		return (recursive_bits(n, m));
-	return (-1);
+	unsigned int res = 0;
 
+	while (n || m)
+	{
+		res += (~((n & 1) & (m & 1)));
+		n >>= 1;
+		m >>= 1;
+	}
+	return (res);
 }
