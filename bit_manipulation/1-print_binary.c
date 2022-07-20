@@ -11,7 +11,7 @@ void recursive_print(unsigned long int n)
 	if (n)
 	{
 		recursive_print(n >> 1);
-		printf("%ld", n & 1);
+		putchar((n & 1) + '0');
 	}
 }
 
