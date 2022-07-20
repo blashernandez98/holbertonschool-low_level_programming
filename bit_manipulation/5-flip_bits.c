@@ -15,7 +15,7 @@ int recursive_bits(unsigned long int n, unsigned long int m)
 	if (n || m)
 	{
 		res += recursive_bits(n >> 1, m >> 1);
-		return (~((n & 1) & (m & 1)) + res);
+		return ((~((n & 1) & (m & 1))) + res);
 	}
 	return (res);
 }
