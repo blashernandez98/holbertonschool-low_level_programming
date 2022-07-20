@@ -9,11 +9,11 @@
 
 int pow2(int power)
 {
-        int i = 0, res = 1;
+	int i = 0, res = 1;
 
-        for (i = 0; i < power; i++)
-                res *= 2;
-        return (res);
+	for (i = 0; i < power; i++)
+		res *= 2;
+	return (res);
 }
 
 /**
@@ -31,5 +31,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	*n = ((*n) | pow2(index));
 
-	return(1);
+	return (1);
 }
