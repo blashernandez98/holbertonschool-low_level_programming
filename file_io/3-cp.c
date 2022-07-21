@@ -18,16 +18,18 @@ void error_check(int n, int code, char *name)
 	if (n != -1)
 		return;
 
-	switch (code) {
-		case 98:
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", name);
-			exit(98);
-		case 99:
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", name);
-			exit(99);
-		case 100:
-			dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", name);
-			exit(100);
+	switch (code)
+	{
+
+	case 98:
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", name);
+		exit(98);
+	case 99:
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", name);
+		exit(99);
+	case 100:
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", name);
+		exit(100);
 	}
 }
 
@@ -35,6 +37,8 @@ void error_check(int n, int code, char *name)
  * main - Entry point.
  * @argc: Number of arguments
  * @argv: Pointer to list of arguments.
+ *
+ * Return: always 0.
  */
 
 int main(int argc, char **argv)
@@ -42,6 +46,7 @@ int main(int argc, char **argv)
 	int file1, file2, copied, wrote;
 	char buffer[1024];
 	char str[4];
+
 	if (argc != 3)
 	{
 		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
