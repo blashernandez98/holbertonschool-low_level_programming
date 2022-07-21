@@ -7,7 +7,7 @@
 #include <string.h>
 
 /**
- * read_textfile - Creates new file.
+ * create_file - Creates new file.
  * @filename: Name of new file.
  * @text_content: Content for new file.
  *
@@ -20,9 +20,9 @@ int create_file(const char *filename, char *text_content)
 
 	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
-	if (fd == -1)
+	if ((fd == -1) || !(text_content))
 		return (-1);
-	
+
 	letters = write(fd, text_content, strlen(text_content));
 
 	if (letters == -1)
