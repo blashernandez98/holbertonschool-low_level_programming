@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 	}
 
 	file1 = open(argv[1], O_RDONLY);
-	file2 = open(argv[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
+	file2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	error_check(file1, 98, argv[1]);
 	error_check(file2, 99, argv[2]);
 
