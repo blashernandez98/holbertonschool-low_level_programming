@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stddef.h>
+#include <stdlib.h>
 
 /**
  * add_dnodeint - Adds node to a dlistint list at the start.
