@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 #define UNS unsigned int
+#include "1-dlistint_len.c"
 
 /**
  * insert_dnodeint_at_index - Adds node at index of a dlistint_t linked list.
@@ -14,7 +15,7 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **head, UNS index, int n)
 {
 	dlistint_t *new, *cursor, *aux;
-	int len = dlistint_len(*head);
+	UNS len = dlistint_len(*head);
 
 	if (head && index <= len)
 	{
