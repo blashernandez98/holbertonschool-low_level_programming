@@ -14,10 +14,10 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **head, UNS index, int n)
 {
-	dlistint_t *new, *cursor, *aux;
+	dlistint_t *new = NULL, *cursor, *aux;
 	UNS len = dlistint_len(*head);
 
-	if (head && index <= len)
+	if (head && (index <= len))
 	{
 		if (index == 0)
 		{
