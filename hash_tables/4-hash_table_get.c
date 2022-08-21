@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * search_key - Searches if a key already is stores in a list.
+ * search_for_key - Searches if a key already is stores in a list.
  * @key: Key to search for.
  * @list: Pointer to first node of list.
  *
