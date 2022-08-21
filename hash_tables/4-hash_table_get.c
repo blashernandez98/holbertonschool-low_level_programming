@@ -1,4 +1,24 @@
 #include "hash_tables.h"
+#include <string.h>
+
+/**
+ * search_key - Searches if a key already is stores in a list.
+ * @key: Key to search for.
+ * @list: Pointer to first node of list.
+ *
+ * Return: Pointer to node with key or NULL if it doesn't exist.
+ */
+
+hash_node_t *search_key(char *key, hash_node_t *list)
+{
+	while (list)
+	{
+		if (strcmp(key, list->key) == 0)
+			return (list);
+		list = list->next;
+	}
+	return (NULL);
+}
 
 /**
  * hash_table_get - Retrieves value associated with key in a hash table.
