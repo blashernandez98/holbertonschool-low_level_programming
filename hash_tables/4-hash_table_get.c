@@ -9,7 +9,7 @@
  * Return: Pointer to node with key or NULL if it doesn't exist.
  */
 
-hash_node_t *search_key(char *key, hash_node_t *list)
+hash_node_t *search_for_key(char *key, hash_node_t *list)
 {
 	while (list)
 	{
@@ -46,7 +46,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 			free(key_cp);
 			return (NULL);
 		}
-		node = (search_key(key_cp, *location));
+		node = (search_for_key(key_cp, *location));
 		if (node)
 		{
 			free(key_cp);
