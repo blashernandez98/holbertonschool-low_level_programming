@@ -28,23 +28,19 @@ void print_array(int *a, size_t size)
 int binary_search(int *array, size_t size, int value)
 {
 	int half, pos;
-	size_t i;
 
 	if (array && size > 1)
 	{
 		half = (size - 1) / 2;
-		print_array(array, size);	
+		print_array(array, size);
 		if (array[half] == value)
 			return (half);
 		else if (array[half] > value)
 			return (binary_search(array, half, value));
-		else
-		{
-			pos = binary_search(array + half + 1, size - half - 1, value);
-			if (pos != -1)
-				pos += half + 1;
-			return (pos);
-		}
+		pos = binary_search(array + half + 1, size - half - 1, value);
+		if (pos != -1)
+			pos += half + 1;
+		return (pos);
 	}
 	else if (size == 1)
 	{
