@@ -29,23 +29,26 @@ int binary_search(int *array, size_t size, int value)
 {
 	int half, pos;
 
-	if (array && size > 1)
+	if (array)
 	{
-		half = (size - 1) / 2;
 		print_array(array, size);
-		if (array[half] == value)
-			return (half);
-		else if (array[half] > value)
-			return (binary_search(array, half, value));
-		pos = binary_search(array + half + 1, size - half - 1, value);
-		if (pos != -1)
-			pos += half + 1;
-		return (pos);
-	}
-	else if (size == 1)
-	{
-		if (array[0] == value)
-			return (0);
+		if (size > 1)
+		{
+			half = (size - 1) / 2;
+			if (array[half] == value)
+				return (half);
+			else if (array[half] > value)
+				return (binary_search(array, half, value));
+			pos = binary_search(array + half + 1, size - half - 1, value);
+			if (pos != -1)
+				pos += half + 1;
+			return (pos);
+		}
+		else if (size == 1)
+		{
+			if (array[0] == value)
+				return (0);
+		}
 	}
 	return (-1);
 }
